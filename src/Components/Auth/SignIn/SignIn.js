@@ -8,10 +8,10 @@ const SignIn = () => {
       <div class="main_div">
         <div class="title">Login Form</div>
         <div class="social_icons">
-          <a href="#">
+          <a href="#facebook">
             <i class="fab fa-facebook-f"></i> <span>Facebook</span>
           </a>
-          <a href="#">
+          <a href="#twitter">
             <i class="fab fa-twitter"></i>
             <span>Twitter</span>
           </a>

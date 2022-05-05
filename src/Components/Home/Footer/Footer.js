@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import logo from "../../../Images/Logo/logo.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
               <div className="row">
                 <div className="col-md-6 ">
                   <div className="logo-part">
-                    <img src="https://i.ibb.co/sHZz13b/logo.png" className="w-50 logo-footer" />
+                    <img src={logo} className="w-50 logo-footer" alt="logo" />
                     <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
                     <p>
                       Use this tool as test data for an automated system or find
@@ -22,12 +23,12 @@ const Footer = () => {
                 <div className="col-md-6 px-4">
                   <h6> About Company</h6>
                   <p>But horizontal lines can only be a full pixel high.</p>
-                  <a href="#" className="btn-footer">
+                  <a href="#moreInfo" className="btn-footer">
                     {" "}
                     More Info{" "}
                   </a>{" "}
                   <br />
-                  <a href="#" className="btn-footer">
+                  <a href="#contactUs" className="btn-footer">
                     {" "}
                     Contact Us
                   </a>
@@ -43,27 +44,27 @@ const Footer = () => {
                       <ul>
                         <li>
                           {" "}
-                          <a href="#"> Home</a>{" "}
+                          <a href="#home"> Home</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> About</a>{" "}
+                          <a href="#about"> About</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Service</a>{" "}
+                          <a href="#service"> Service</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Team</a>{" "}
+                          <a href="#team"> Team</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Help</a>{" "}
+                          <a href="#help"> Help</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Contact</a>{" "}
+                          <a href="#contact"> Contact</a>{" "}
                         </li>
                       </ul>
                     </div>
@@ -71,27 +72,27 @@ const Footer = () => {
                       <ul>
                         <li>
                           {" "}
-                          <a href="#"> Cab Faciliy</a>{" "}
+                          <a href="#cab"> Cab Faciliy</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Fax</a>{" "}
+                          <a href="#fax"> Fax</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Terms</a>{" "}
+                          <a href="#terms"> Terms</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Policy</a>{" "}
+                          <a href="#policy"> Policy</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Refunds</a>{" "}
+                          <a href="#refunds"> Refunds</a>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a href="#"> Paypal</a>{" "}
+                          <a href="#paypal"> Paypal</a>{" "}
                         </li>
                       </ul>
                     </div>
@@ -99,7 +100,7 @@ const Footer = () => {
                 </div>
                 <div className="col-md-6 ">
                   <h6> Newsletter</h6>
-                  
+
                   <p>That's technology limitation of LCD monitors</p>
                 </div>
               </div>

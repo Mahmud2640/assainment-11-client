@@ -7,10 +7,10 @@ const SignUp = () => {
       <div class="main_div">
         <div class="title">Login Form</div>
         <div class="social_icons">
-          <a href="#">
+          <a href="#facebook">
             <i class="fab fa-facebook-f"></i> <span>Facebook</span>
           </a>
-          <a href="#">
+          <a href="#twitter">
             <i class="fab fa-twitter"></i>
             <span>Twitter</span>
           </a>
@@ -40,14 +40,14 @@ const SignUp = () => {
               <span>Remember me</span>
             </div>
             <div class="forget_div">
-              <a href="#">Forgot password?</a>
+              <a href="#forgetPassword">Forgot password?</a>
             </div>
           </div>
           <div class="input_box button">
             <input type="submit" value="Login" />
           </div>
           <div class="sign_up">
-            Not a member? <a href="#">Signup now</a>
+            Not a member? <a href="#signup">Signup now</a>
           </div>
         </form>
       </div>
