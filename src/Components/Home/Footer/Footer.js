@@ -4,17 +4,14 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <footer class="container-fluid bg-grey py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-6 ">
-                  <div class="logo-part">
-                    <img
-                      src="https://i.ibb.co/sHZz13b/logo.png"
-                      class="w-50 logo-footer"
-                    />
+      <footer className="container-fluid bg-grey py-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="row">
+                <div className="col-md-6 ">
+                  <div className="logo-part">
+                    <img src="https://i.ibb.co/sHZz13b/logo.png" className="w-50 logo-footer" />
                     <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
                     <p>
                       Use this tool as test data for an automated system or find
@@ -22,27 +19,27 @@ const Footer = () => {
                     </p>
                   </div>
                 </div>
-                <div class="col-md-6 px-4">
+                <div className="col-md-6 px-4">
                   <h6> About Company</h6>
                   <p>But horizontal lines can only be a full pixel high.</p>
-                  <a href="#" class="btn-footer">
+                  <a href="#" className="btn-footer">
                     {" "}
                     More Info{" "}
                   </a>{" "}
                   <br />
-                  <a href="#" class="btn-footer">
+                  <a href="#" className="btn-footer">
                     {" "}
                     Contact Us
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="row">
-                <div class="col-md-6 px-4">
+            <div className="col-md-6">
+              <div className="row">
+                <div className="col-md-6 px-4">
                   <h6> Help us</h6>
-                  <div class="row ">
-                    <div class="col-md-6">
+                  <div className="row ">
+                    <div className="col-md-6">
                       <ul>
                         <li>
                           {" "}
@@ -70,7 +67,7 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div>
-                    <div class="col-md-6 px-4">
+                    <div className="col-md-6 px-4">
                       <ul>
                         <li>
                           {" "}
@@ -100,7 +97,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 ">
+                <div className="col-md-6 ">
                   <h6> Newsletter</h6>
                   
                   <p>That's technology limitation of LCD monitors</p>
