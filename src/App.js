@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import SignIn from "./Components/Auth/SignIn/SignIn";
+import SignUp from "./Components/Auth/SignUp/SignUp";
 import Error from "./Components/Error/Error";
 import About from "./Components/Home/About/About";
 import Blog from "./Components/Home/Blog/Blog";
@@ -19,6 +20,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="*" element={<Error />} />
       </Routes>
