@@ -11,6 +11,7 @@ import Home from "./Components/Home/Home/Home";
 import Products from "./Components/Home/Products/Products";
 import AddProduct from "./Components/Pages/AddProduct/AddProduct";
 import Inventory from "./Components/Pages/Inventory/Inventory";
+import Manage from "./Components/Pages/Manage/Manage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/blogs" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/manage" element={<Manage />} />
         <Route path="/inventory/:inventoryId" element={<Inventory />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />

@@ -13,7 +13,7 @@ const Inventory = () => {
   return (
     <div>
       <h2>Welcome to detail: {inventory.name}</h2>
-      {/* <img src={inventory.img} alt="" /> */}
+      <img src={inventory.img} alt="" />
       <h2>Quantity : {inventory.quantity}</h2>
       <button className='btn btn-primary m-5'>Shipped</button>
       

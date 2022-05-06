@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
+import useProducts from "../../Shared/hook/hook";
 import Product from "./Product";
 import "./Products.css";
 const Products = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:5000/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  const [products] = useProducts();
 
   return (
     <div className="container">
