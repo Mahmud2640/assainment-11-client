@@ -9,6 +9,8 @@ import Footer from "./Components/Home/Footer/Footer";
 import Header from "./Components/Home/Header/Header";
 import Home from "./Components/Home/Home/Home";
 import Products from "./Components/Home/Products/Products";
+import AddProduct from "./Components/Pages/AddProduct/AddProduct";
+import Inventory from "./Components/Pages/Inventory/Inventory";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/inventory/:inventoryId" element={<Inventory />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="*" element={<Error />} />

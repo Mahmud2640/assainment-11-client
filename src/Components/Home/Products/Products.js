@@ -13,7 +13,7 @@ const Products = () => {
   return (
     <div className="container">
       <div className="row">
-        <h1 className="text-center m-4"> Our Services</h1>
+        <h1 className="text-center m-4"> Our Services {products.length}</h1>
         <div className="products-container">
           {products.map((product) => (
             <Product key={product._id} product={product}></Product>
