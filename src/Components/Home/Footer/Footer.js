@@ -3,8 +3,10 @@ import "./Footer.css";
 import logo from "../../../Images/Logo/logo.png";
 
 const Footer = () => {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
-    <div className="footer">
+    <div className="footer mt-5">
       <footer className="container-fluid bg-grey py-5">
         <div className="container">
           <div className="row">
@@ -107,6 +109,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        <p className="text-center mt-2">
+          <small>copyright @ {year} </small>
+        </p>
       </footer>
     </div>
   );
