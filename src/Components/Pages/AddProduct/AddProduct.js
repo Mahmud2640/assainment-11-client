@@ -6,7 +6,7 @@ const AddProduct = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://warm-river-98724.herokuapp.com/products`;
+    const url = `https://warm-river-98724.herokuapp.com/product`;
     fetch(url, {
       method: "POST",
       headers: {

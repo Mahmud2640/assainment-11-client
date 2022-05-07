@@ -6,7 +6,7 @@ const Inventory = () => {
   const [inventory, setInventory] = useState([]);
 
   useEffect(() => {
-    fetch(`https://warm-river-98724.herokuapp.com/products/${inventoryId}`)
+    fetch(`https://warm-river-98724.herokuapp.com/product/${inventoryId}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, []);
