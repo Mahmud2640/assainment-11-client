@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import { signOut } from "firebase/auth";
+import "./Header.css";
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -20,7 +21,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto nav-text">
               <Nav.Link as={Link} to="/products">
                 Products
               </Nav.Link>

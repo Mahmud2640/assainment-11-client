@@ -14,7 +14,7 @@ const Inventory = () => {
   return (
     <div className="full-section">
       <h2>Product Detail Information</h2>
-      <div className="full-div">
+      <div className="full-div m-5">
         <div className="image">
           <img src={inventory.img} alt="" />
         </div>

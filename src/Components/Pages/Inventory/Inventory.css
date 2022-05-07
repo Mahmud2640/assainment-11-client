@@ -10,9 +10,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
-  margin: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
   border-radius: 5px;
 }
 .image img {
