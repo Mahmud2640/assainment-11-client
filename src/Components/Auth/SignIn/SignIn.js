@@ -1,51 +1,115 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { Button, Form } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
+import { toast, ToastContainer } from "react-toastify";
+import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
 import "./SignIn.css";
+import Google from "../GoogleLogin/Google";
 
 const SignIn = () => {
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
+  let errorMessage;
+
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
+  if (error) {
+    errorMessage = <p className="text-danger">Error: {error?.message}</p>;
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    signInWithEmailAndPassword(email, password);
+  };
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+  const navigateRegister = (e) => {
+    navigate("/signup");
+  };
+
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Please check your email");
+    } else {
+      toast("Please enter your email");
+    }
+  };
+  if (loading) {
+    return <Loading></Loading>;
+  }
   return (
-    <div className="body">
-      <div class="main_div">
-        <div class="title">Login Form</div>
-        <div class="social_icons">
-          <a href="#facebook">
-            <i class="fab fa-facebook-f"></i> <span>Facebook</span>
-          </a>
-          <a href="#twitter">
-            <i class="fab fa-twitter"></i>
-            <span>Twitter</span>
-          </a>
-        </div>
-        <form action="#">
-          <div class="input_box">
-            <input type="text" placeholder="Email or Phone" required />
-            <div class="icon">
-              <i class="fas fa-user"></i>
-            </div>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Password" required />
-            <div class="icon">
-              <i class="fas fa-lock"></i>
-            </div>
-          </div>
-          <div class="option_div">
-            <div class="check_box">
-              <input type="checkbox" />
-              <span>Remember me</span>
-            </div>
-            <div class="forget_div">
-              <Link to="/signup">Forgot password</Link>
-            </div>
-          </div>
-          <div class="input_box button">
-            <input type="submit" value="Login" />
-          </div>
-          <div class="sign_up">
-            Not a member? <Link to="/signup">Signup now</Link>
-          </div>
-        </form>
-      </div>
+    <div className="container w-50 mx-auto mt-4 mb-5">
+      <h2 className="text-primary text-center">Please Log In</h2>
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            ref={emailRef}
+            type="email"
+            placeholder="Enter email"
+            required
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            ref={passwordRef}
+            type="password"
+            placeholder="Password"
+            required
+          />
+        </Form.Group>
+
+        <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
+          Log In
+        </Button>
+      </Form>
+      {errorMessage}
+      <p className="text-1">
+        Create a
+        <Link
+          to="/signup"
+          className="text-danger span-1"
+          onClick={navigateRegister}
+        >
+          New account
+        </Link>
+      </p>
+      <p className="text-1">
+        Forget password!!
+        <Button
+          className="text-danger span-1 btn btn-link"
+          onClick={resetPassword}
+        >
+          Reset Password
+        </Button>
+      </p>
+      <Google></Google>
+      <ToastContainer />
     </div>
   );
 };

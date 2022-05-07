@@ -1,55 +1,89 @@
-import React from "react";
-import "./SignUp.css";
+import React, { useRef } from "react";
+import { Button, Form } from "react-bootstrap";
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../../firebase.init";
+import Loading from "../../Shared/Loading/Loading";
+import Google from "../GoogleLogin/Google";
+
 
 const SignUp = () => {
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    await createUserWithEmailAndPassword(email, password);
+    await updateProfile({displayName: name});
+    navigate("/home");
+  };
+  const navigate = useNavigate();
+  const navigateLogin = () => {
+    navigate("/signin");
+  };
+  if(user){
+      navigate("/home");
+  }
+  if(loading){
+    return <Loading></Loading>
+ }
+
   return (
-    <div className="body">
-      <div class="main_div">
-        <div class="title">Login Form</div>
-        <div class="social_icons">
-          <a href="#facebook">
-            <i class="fab fa-facebook-f"></i> <span>Facebook</span>
-          </a>
-          <a href="#twitter">
-            <i class="fab fa-twitter"></i>
-            <span>Twitter</span>
-          </a>
-        </div>
-        <form action="#">
-          <div class="input_box">
-            <input type="text" placeholder="Email or Phone" required />
-            <div class="icon">
-              <i class="fas fa-user"></i>
-            </div>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Password" required />
-            <div class="icon">
-              <i class="fas fa-lock"></i>
-            </div>
-          </div>
-          <div class="input_box">
-            <input type="text" placeholder="Name" required />
-            <div class="icon">
-              <i class="fas fa-lock"></i>
-            </div>
-          </div>
-          <div class="option_div">
-            <div class="check_box">
-              <input type="checkbox" />
-              <span>Remember me</span>
-            </div>
-            <div class="forget_div">
-              <a href="#forgetPassword">Forgot password?</a>
-            </div>
-          </div>
-          <div class="input_box button">
-            <input type="submit" value="Login" />
-          </div>
-          <div class="sign_up">
-            Not a member? <a href="#signup">Signup now</a>
-          </div>
-        </form>
+    <div>
+      <div className="container w-50 mx-auto mt-4 mb-5">
+        <h2 className="text-primary text-center">Please Register!!!</h2>
+        <Form onSubmit={handleRegister}>
+          <Form.Group className="mb-3" controlId="formBasicName">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              ref={nameRef}
+              type="text"
+              placeholder="Enter your Name"
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              ref={emailRef}
+              type="email"
+              placeholder="Enter email"
+              required
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              ref={passwordRef}
+              type="password"
+              placeholder="Password"
+              required
+            />
+          </Form.Group>
+          <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
+            Register
+          </Button>
+        </Form>
+        <p className="text-1">
+          Already have an account?
+          <Link
+            to="/signin"
+            className="text-danger span-1"
+            onClick={navigateLogin}
+          >
+            Log In
+          </Link>
+        </p>
+        <Google></Google>
       </div>
     </div>
   );
