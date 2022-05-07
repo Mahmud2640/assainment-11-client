@@ -40,7 +40,7 @@ const SignUp = () => {
   return (
     <div>
       <div className="container w-50 mx-auto mt-4 mb-5">
-        <h2 className="text-primary text-center">Please Register!!!</h2>
+        <h2 className="text-center">Please Register!!!</h2>
         <Form onSubmit={handleRegister}>
           <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Name</Form.Label>

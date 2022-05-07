@@ -59,7 +59,7 @@ const SignIn = () => {
   }
   return (
     <div className="container w-50 mx-auto mt-4 mb-5">
-      <h2 className="text-primary text-center">Please Log In</h2>
+      <h2 className=" text-center">Please Log In</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -69,9 +69,6 @@ const SignIn = () => {
             placeholder="Enter email"
             required
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -91,20 +88,13 @@ const SignIn = () => {
       {errorMessage}
       <p className="text-1">
         Create a
-        <Link
-          to="/signup"
-          className="text-danger span-1"
-          onClick={navigateRegister}
-        >
+        <Link to="/signup" className="m-2 " onClick={navigateRegister}>
           New account
         </Link>
       </p>
       <p className="text-1">
         Forget password!!
-        <Button
-          className="text-danger span-1 btn btn-link"
-          onClick={resetPassword}
-        >
+        <Button className=" m-2 btn btn primary" onClick={resetPassword}>
           Reset Password
         </Button>
       </p>
