@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./Inventory.css";
 
 const Inventory = () => {
   const { inventoryId } = useParams();
@@ -11,12 +12,22 @@ const Inventory = () => {
       .then((data) => setInventory(data));
   }, []);
   return (
-    <div>
-      <h2>Welcome to detail: {inventory.name}</h2>
-      <img src={inventory.img} alt="" />
-      <h2>Quantity : {inventory.quantity}</h2>
-      <button className='btn btn-primary m-5'>Shipped</button>
-      
+    <div className="full-section">
+      <h2>Product Detail Information</h2>
+      <div className="full-div">
+        <div className="image">
+          <img src={inventory.img} alt="" />
+        </div>
+        <div className="info">
+          <h1>{inventory.name}</h1>
+          <p>{inventory.description}</p>
+          <p>{inventory.price}</p>
+          <h3>Quantity : {inventory.quantity}</h3>
+          <input type="number" placeholder="Added item" />
+          <button className="btn btn-outline-primary m-2">Add item</button>
+          <button className="btn btn-outline-danger m-3">Shipped</button>
+        </div>
+      </div>
     </div>
   );
 };

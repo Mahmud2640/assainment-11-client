@@ -17,7 +17,10 @@ const Product = ({ product }) => {
       <p>
         <small>{description}</small>
       </p>
-      <button onClick={() => navigateToUpdate(_id)} className="btn btn-primary">
+      <button
+        onClick={() => navigateToUpdate(_id)}
+        className="btn btn-outline-primary"
+      >
         Update: {name}
       </button>
     </div>

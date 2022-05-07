@@ -32,7 +32,14 @@ function App() {
             </RequirdAuth>
           }
         />
-        <Route path="/manage" element={<Manage />} />
+        <Route
+          path="/manage"
+          element={
+            <RequirdAuth>
+              <Manage />
+            </RequirdAuth>
+          }
+        />
         <Route path="/inventory/:inventoryId" element={<Inventory />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />

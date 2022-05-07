@@ -1,0 +1,38 @@
+.full-section {
+  margin: 20px;
+}
+.full-section h2 {
+  text-align: center;
+  color: rgb(233, 30, 76);
+}
+
+.full-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+.image img {
+  width: 90%;
+  height: 90%;
+}
+.info {
+  padding: 10px;
+}
+.info h1 {
+  font-weight: bold;
+  color: rgb(233, 30, 76);
+}
+
+@media screen and (max-width: 600px) {
+   .full-div {
+      grid-template-columns: 1fr;
+   }
+   .image img{
+      width: 100%;
+      height: 100%;
+   }
+}
