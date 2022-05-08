@@ -7,6 +7,10 @@
 .inventory-map{
    display: grid;
    grid-template-columns: repeat(6, 1fr);
+   grid-gap: 30px;
+   margin: 10px;
+   align-items: center;
+   box-shadow: 20px 20px 20px rgb(209, 178, 178);
 }
 .inventory-map img{
    width: 60%;
@@ -18,4 +22,5 @@
 .btn-manage{
    height: 60%;
    width: 70%;
+   margin: 10px;
 }
