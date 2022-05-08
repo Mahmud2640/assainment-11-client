@@ -10,7 +10,7 @@ const Inventory = () => {
     fetch(`https://warm-river-98724.herokuapp.com/product/${inventoryId}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
-  }, []);
+  }, [inventoryId]);
   return (
     <div className="full-section">
       <h2>Product Detail Information</h2>

@@ -1,0 +1,21 @@
+.manage-inventory{
+   margin: 10px;
+   margin-left: 50px;
+   margin-bottom: 5px;
+   text-align: center;
+}
+.inventory-map{
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+}
+.inventory-map img{
+   width: 60%;
+   height: 100%;
+}
+.inventory-map img:hover{
+   cursor: pointer;
+}
+.btn-manage{
+   height: 60%;
+   width: 70%;
+}
