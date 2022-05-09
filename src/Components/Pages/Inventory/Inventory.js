@@ -11,6 +11,17 @@ const Inventory = () => {
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, [inventoryId]);
+  // const handleQuantity = (e) => {
+  //   const quantity = e.target.quantity.value + 1;
+  //   const updateQuantity = { quantity };
+  //   fetch(`https://warm-river-98724.herokuapp.com/product/${inventoryId}`, {
+  //     method: "PUT",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(updateQuantity),
+  //   }).then((res) => res.json());
+  // };
   return (
     <div className="full-section">
       <h2>Product Detail Information</h2>
@@ -24,7 +35,12 @@ const Inventory = () => {
           <p>{inventory.price}</p>
           <h3>Quantity : {inventory.quantity}</h3>
           <input type="number" placeholder="Added item" />
-          <button className="btn btn-outline-primary m-2">Add item</button>
+          <button
+            className="btn btn-outline-primary m-2"
+            // onClick={() => handleQuantity()}
+          >
+            Add item
+          </button>
           <button className="btn btn-outline-danger m-3">Shipped</button>
         </div>
       </div>

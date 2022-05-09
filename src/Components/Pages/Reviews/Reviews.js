@@ -30,10 +30,12 @@ const Reviews = () => {
 
             <div class="client-comment">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, quaerat quis? Provident temporibus architecto
-                asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam
-                tenetur voluptates incidunt blanditiis sed atque cumque.
+                This is best products i ever seen. I love this product. I am so
+                here you can use this product. I am so here you can use this
+                product and I am so here you can use this product. I am so here
+                you can use this product . I am so here you can use this product
+                . I am so here you can use this product . I am so here you can
+                use this product
               </p>
             </div>
           </div>
@@ -57,10 +59,12 @@ const Reviews = () => {
 
             <div class="client-comment">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, quaerat quis? Provident temporibus architecto
-                asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam
-                tenetur voluptates incidunt blanditiis sed atque cumque.
+                This is best products i ever seen. I love this product. I am so
+                here you can use this product. I am so here you can use this
+                product and I am so here you can use this product. I am so here
+                you can use this product . I am so here you can use this product
+                . I am so here you can use this product . I am so here you can
+                use this product
               </p>
             </div>
           </div>
@@ -84,10 +88,12 @@ const Reviews = () => {
 
             <div class="client-comment">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, quaerat quis? Provident temporibus architecto
-                asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam
-                tenetur voluptates incidunt blanditiis sed atque cumque.
+                This is best products i ever seen. I love this product. I am so
+                here you can use this product. I am so here you can use this
+                product and I am so here you can use this product. I am so here
+                you can use this product . I am so here you can use this product
+                . I am so here you can use this product . I am so here you can
+                use this product
               </p>
             </div>
           </div>
@@ -111,10 +117,12 @@ const Reviews = () => {
 
             <div class="client-comment">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, quaerat quis? Provident temporibus architecto
-                asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam
-                tenetur voluptates incidunt blanditiis sed atque cumque.
+                This is best products i ever seen. I love this product. I am so
+                here you can use this product. I am so here you can use this
+                product and I am so here you can use this product. I am so here
+                you can use this product . I am so here you can use this product
+                . I am so here you can use this product . I am so here you can
+                use this product
               </p>
             </div>
           </div>

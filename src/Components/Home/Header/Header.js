@@ -14,7 +14,13 @@ const Header = () => {
   };
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        sticky="top"
+      >
         <Container>
           <Navbar.Brand as={Link} to="/home">
             SingerBD
@@ -31,12 +37,16 @@ const Header = () => {
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/add-product">
-                Add Product
-              </Nav.Link>
-              <Nav.Link as={Link} to="/manage">
-                Manage Products
-              </Nav.Link>
+              {user && (
+                <>
+                  <Nav.Link as={Link} to="/add-product">
+                    Add Product
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/manage">
+                    Manage Products
+                  </Nav.Link>
+                </>
+              )}
             </Nav>
             <Nav>
               {user ? (

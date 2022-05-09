@@ -40,7 +40,14 @@ function App() {
             </RequirdAuth>
           }
         />
-        <Route path="/inventory/:inventoryId" element={<Inventory />} />
+        <Route
+          path="/inventory/:inventoryId"
+          element={
+            <RequirdAuth>
+              <Inventory />
+            </RequirdAuth>
+          }
+        />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="*" element={<Error />} />
