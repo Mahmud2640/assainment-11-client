@@ -12,16 +12,20 @@ const Inventory = () => {
       .then((data) => setInventory(data));
   }, [inventoryId]);
   // const handleQuantity = (e) => {
-  //   const quantity = e.target.quantity.value + 1;
+  //   const quantity = e.target.quantity.value - 1;
   //   const updateQuantity = { quantity };
-  //   fetch(`https://warm-river-98724.herokuapp.com/product/${inventoryId}`, {
+  //   const url = `https://warm-river-98724.herokuapp.com/product/${inventoryId}`;
+  //   fetch(url, {
   //     method: "PUT",
   //     headers: {
   //       "Content-Type": "application/json",
   //     },
   //     body: JSON.stringify(updateQuantity),
-  //   }).then((res) => res.json());
-  // };
+  //   }).then(() => {
+  //     window.location.reload();
+  //   }
+  //   );
+  // }
   return (
     <div className="full-section">
       <h2>Product Detail Information</h2>
@@ -37,7 +41,7 @@ const Inventory = () => {
           <input type="number" placeholder="Added item" />
           <button
             className="btn btn-outline-primary m-2"
-            // onClick={() => handleQuantity()}
+            // onClick={() => handleQuantity(inventory._id)}
           >
             Add item
           </button>

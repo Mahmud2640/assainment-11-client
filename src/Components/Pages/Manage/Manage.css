@@ -24,3 +24,20 @@
    width: 70%;
    margin: 10px;
 }
+@media screen and (max-width: 600px){
+   .inventory-map{
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .manage-inventory{
+      margin-left: 0px;
+   }
+
+}
+@media screen and (max-width: 400px){
+   .inventory-map{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .manage-inventory{
+      margin-left: 0px;
+   }
+}
