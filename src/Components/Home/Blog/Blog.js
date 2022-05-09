@@ -3,7 +3,7 @@ import "./Blog.css";
 
 const Blog = () => {
   return (
-    <div className=" container m-5">
+    <div className="blog-post container m-5">
       <h5>
         Add two more routes. one route will be blogs. You will need to answer at
         least three questions on the blog page. This won't protected route. We
